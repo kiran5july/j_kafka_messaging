@@ -12,8 +12,6 @@ apache,apache
 
 #Start the producer for actual words
 
-
-
  */
 
 import io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde;
@@ -30,18 +28,15 @@ import java.util.Properties;
 
 public class KafkaStreamVision {
 
-    private final static String TOPIC_STATS = //"km.vision.endpointstats.topic.test2";
-                                                "rtalab.allstate.is.vision.stats";
-    private final static String TOPIC_EVENTS = "rtalab.allstate.is.vision.test";
+    private final static String TOPIC_STATS = //"km.kafka.endpointstats.topic.test2";
+    private final static String TOPIC_EVENTS = "km.kafka.event";
 
-    private final static String TOPIC_RESULT = //"km.wordcounts";
-                                            "rtalab.allstate.is.vision.results_str_spark";
+    private final static String TOPIC_RESULT = "km.kafka.result";
 
-    private final static String BOOTSTRAP_SERVERS =     //"localhost:9092";
-            "lxe0961.allstate.com:9092, lxe0962.allstate.com:9092, lxe0963.allstate.com:9092, lxe0964.allstate.com:9092, lxe0965.allstate.com:9092";
+    private final static String BOOTSTRAP_SERVERS = "brkr1.abc.com:9092, brkr2.abc.com:9092, brkr3.abc.com:9092";
     private final static String GROUP_ID = "KM_Consumer_Group3";
     //private logger = Logger.getLogger(this.getClass.getName)
-    private final static String SCHEMA_REG_URL = "http://lxe0961.allstate.com:8081";
+    private final static String SCHEMA_REG_URL = "http://schm.abc.com:8081";
 
     public static void main(String[] args) {
 
